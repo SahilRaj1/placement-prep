@@ -3,7 +3,7 @@
 // TIME COMPLEXITY: O(n^2)
 // SPACE COMPLEXITY: O(1)
 
-// REFERENCE: https://youtu.be/zOhUavxlzw4?list=PLDzeHZWIZsTp4pb_WBRahP1tnipLuX9qM
+// REFERENCE: https://youtu.be/zOhUavxlzw4
 
 #include <bits/stdc++.h>
 using namespace std;
