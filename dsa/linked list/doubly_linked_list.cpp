@@ -1,4 +1,4 @@
-/* TOPIC:  */
+/* TOPIC: Doubly Linked List */
 
 // REFERENCE: https://youtu.be/q8gdBn9RPeI
 
@@ -16,6 +16,15 @@ class Node {
         this->data = data;
         this->next = NULL;
         this->prev = NULL;
+    }
+
+    ~Node() {
+        int value = this->data;
+        if (this->next != NULL) {
+            delete next;
+            this->next = NULL;
+        }
+        cout<<"memory is free for node with value "<<value<<endl;
     }
 
 };
