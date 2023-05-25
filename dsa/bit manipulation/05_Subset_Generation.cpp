@@ -1,4 +1,4 @@
-/* TOPIC: Power Set Algorithm */
+/* TOPIC: Subset Generation Using Bits (Power Set) */
 
 // TIME COMPLEXITY: O(n*2^n)
 // SPACE COMPLEXITY: O(2^n)
