@@ -17,7 +17,7 @@ class Queue {
         this->size = size;
         this->front = 0;
         this->rear = 0;
-        arr = new int[this->size];
+        this->arr = new int[this->size];
     }
 
     void enqueue(int val) {
