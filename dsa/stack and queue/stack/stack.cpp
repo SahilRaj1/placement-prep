@@ -53,11 +53,7 @@ class Stack {
 
     // TIME COMPLEXITY: O(1)
     bool isEmpty() {
-        if (this->top == -1) {
-            return true;
-        } else {
-            return false;
-        }
+        return this->top == -1;
     }
 
 };
