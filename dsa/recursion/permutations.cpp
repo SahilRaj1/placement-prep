@@ -1,4 +1,4 @@
-/* TOPIC:  */
+/* TOPIC: Permutations of an Array */
 
 // TIME COMPLEXITY: O()
 // SPACE COMPLEXITY: O()

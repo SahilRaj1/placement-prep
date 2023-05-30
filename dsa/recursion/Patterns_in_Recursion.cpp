@@ -1,4 +1,4 @@
-/* TOPIC: Recursion on Subsequences */
+/* TOPIC: Patterns in Recursion on Subsequences */
 
 // TIME COMPLEXITY: O(n^2)
 // SPACE COMPLEXITY: O(n)
