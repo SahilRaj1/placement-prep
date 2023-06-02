@@ -98,7 +98,7 @@ void recursiveLevelOrder(Node* node, int level, vector<vector<int>> &ans) {
 
 }
 
-// in-order traversal
+// in-order traversal => L N R
 void inorderTraversal(Node* node) {
 
     if (node == NULL) {
@@ -111,7 +111,7 @@ void inorderTraversal(Node* node) {
 
 }
 
-// pre-order traversal
+// pre-order traversal => N L R
 void preorderTraversal(Node* node) {
 
     if (node == NULL) {
@@ -124,7 +124,7 @@ void preorderTraversal(Node* node) {
 
 }
 
-// post-order traversal
+// post-order traversal => L R N
 void postorderTraversal(Node* node) {
 
     if (node == NULL) {
