@@ -4,26 +4,34 @@
 // SPACE COMPLEXITY: O(n)
 
 // REFERENCE: https://youtu.be/S31W3kohFDk
-// QUESTION: https://leetcode.com/problems/min-cost-climbing-stairs/
+// QUESTION: https://leetcode.com/problems/min-cost-climbing-stairs/    
 
 #include <bits/stdc++.h>
 using namespace std;
 
-/* Memoization */
+/* Recursion + Memoization */
 class Solution {
 public:
 
     int solve(vector<int>& cost, int n, vector<int>& dp) {
+
+        // base case
         if (n == 0 or n == 1) {
             return cost[n];
         }
+
         if (dp[n] != -1) {
             return dp[n];
         }
+
+        // recursion call
         int left = solve(cost, n-1, dp);
         int right = solve(cost, n-2, dp);
+
+        // return answer
         dp[n] = cost[n] + min(left, right);
         return dp[n];
+
     }
 
     int minCostClimbingStairs(vector<int>& cost) {
@@ -37,24 +45,32 @@ public:
 /* Tabulation */
 class Solution {
 public:
+
     int minCostClimbingStairs(vector<int>& cost) {
+
         int n = cost.size();
         vector<int> dp(n+2);
         dp[0] = cost[0];
         dp[1] = cost[1];
+
         for (int i=2; i<n; i++) {
             int left = dp[i-1];
             int right = dp[i-2];
             dp[i] = cost[i] + min(left, right);
         }
+
         return min(dp[n-1], dp[n-2]);
+
     }
+
 };
 
 /* Space Optimization */
 class Solution {
 public:
+
     int minCostClimbingStairs(vector<int>& cost) {
+
         int n = cost.size();
         int prev1 = cost[0], prev2 = cost[1], temp;
         for (int i=2; i<n; i++) {
@@ -64,7 +80,9 @@ public:
         }
         int ans = min(prev1, prev2);
         return ans;
+
     }
+
 };
 
 int main() {

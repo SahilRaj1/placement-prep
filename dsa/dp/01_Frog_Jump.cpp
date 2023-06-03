@@ -9,7 +9,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/* Memoization */
+/* Recursion + Memoization */
 class Solution {
 public:
     int solve(vector<int> &heights, int i, vector<int> &dp) {
