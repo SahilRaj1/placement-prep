@@ -21,7 +21,7 @@ class Node {
 };
 
 // tree construction
-Node* buildTree(Node* root) {
+Node* buildTree(Node* &root) {
 
     int data;
     cout << "data : ";
@@ -48,7 +48,7 @@ Node* buildTree(Node* root) {
 }
 
 // breadth first search
-void levelOrderTraversal(Node* root) {
+void levelOrderTraversal(Node* &root) {
 
     queue<Node*> q;
     q.push(root);
@@ -181,11 +181,11 @@ int main() {
 
     // creating tree
     // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
-    // root = buildTree(root);
+    root = buildTree(root);
 
     // creating tree using level order
     // 1 3 5 7 11 17 -1 -1 -1 -1 -1 -1 -1
-    buildFromLevelOrder(root);
+    // buildFromLevelOrder(root);
 
     // level order traversal
     // 1 3 5 7 11 17
