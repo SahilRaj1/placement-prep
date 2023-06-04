@@ -6,11 +6,11 @@
 using namespace std;
 
 class Node {
+public:
 
-    public:
-        int data;
-        Node* left;
-        Node* right;
+    int data;
+    Node* left;
+    Node* right;
 
     Node(int data) {
         this->data = data;
@@ -48,7 +48,7 @@ Node* buildTree(Node* &root) {
 }
 
 // breadth first search
-void levelOrderTraversal(Node* &root) {
+void levelOrderTraversal(Node* root) {
 
     queue<Node*> q;
     q.push(root);
@@ -138,7 +138,7 @@ void postorderTraversal(Node* node) {
 }
 
 // create tree from level order traversal
-void buildFromLevelOrder(Node* &root) {
+void buildFromLevelOrder(Node* root) {
 
     queue<Node*> q;
     cout<<"value of root node : ";
