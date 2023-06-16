@@ -74,14 +74,6 @@ public:
 
 };
 
-/* Space Optimization */
-class Solution {
-public:
-
-    // cannot space optimize this
-
-};
-
 int main() {
 
     
