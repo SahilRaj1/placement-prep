@@ -1,8 +1,5 @@
 /* TOPIC: Count Occurrences of Anagrams */
 
-// TIME COMPLEXITY: O()
-// SPACE COMPLEXITY: O()
-
 // REFERENCE: https://youtu.be/MW4lJ8Y0xXk
 // QUESTION: https://practice.geeksforgeeks.org/problems/count-occurences-of-anagrams5839/1
 

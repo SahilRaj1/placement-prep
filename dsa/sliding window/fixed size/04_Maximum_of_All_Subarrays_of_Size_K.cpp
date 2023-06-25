@@ -1,8 +1,5 @@
 /* TOPIC: Maximum of All Subarrays of Size K */
 
-// TIME COMPLEXITY: O()
-// SPACE COMPLEXITY: O()
-
 // REFERENCE: https://youtu.be/xFJXtB5vSmM
 // QUESTION: https://leetcode.com/problems/sliding-window-maximum/
 
@@ -44,11 +41,9 @@ public:
                 deq.pop_front();
             }
             
-
             // slide window forward
             i++;
             j++;
-
 
         }
 

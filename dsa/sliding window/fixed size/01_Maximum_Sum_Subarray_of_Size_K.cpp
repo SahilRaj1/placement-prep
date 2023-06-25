@@ -1,8 +1,5 @@
 /* TOPIC: Maximum Sum Subarray of Size K */
 
-// TIME COMPLEXITY: O()
-// SPACE COMPLEXITY: O()
-
 // REFERENCE: https://youtu.be/KtpqeN0Goro
 // QUESTION: https://practice.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1
 
