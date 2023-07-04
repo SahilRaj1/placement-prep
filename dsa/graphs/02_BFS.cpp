@@ -45,10 +45,8 @@ public:
         while (!q.empty()) {
             int temp = q.front();
             q.pop();
-            if (!visited[temp]) {
-                ans.push_back(temp);
-                visited[temp] = true;
-            }
+            ans.push_back(temp);
+            visited[temp] = true;
             for (auto &it: adj[temp]) {
                 if (!visited[it]) {
                     q.push(it);

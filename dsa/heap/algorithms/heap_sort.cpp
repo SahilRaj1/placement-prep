@@ -16,10 +16,10 @@ void heapify(vector<int> &arr, int n, int i) {
     int right = i * 2 + 2;
 
     // check whether element is in it's correct position
-    if (left < arr.size() and left <= n and arr[largest] < arr[left]) {
+    if (left < n and arr[largest] < arr[left]) {
         largest = left;
     }
-    if (right < arr.size() and right <= n and arr[largest] < arr[right]) {
+    if (right < n and arr[largest] < arr[right]) {
         largest = right;
     }
 
