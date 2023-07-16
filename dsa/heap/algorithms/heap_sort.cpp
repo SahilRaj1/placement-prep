@@ -16,10 +16,10 @@ void heapify(vector<int> &arr, int n, int i) {
     int right = i * 2 + 2;
 
     // check whether element is in it's correct position
-    if (left < n and arr[largest] < arr[left]) {
+    if (left < arr.size() and left <= n and arr[largest] < arr[left]) {
         largest = left;
     }
-    if (right < n and arr[largest] < arr[right]) {
+    if (right < arr.size() and right <= n and arr[largest] < arr[right]) {
         largest = right;
     }
 
@@ -34,25 +34,17 @@ void heapify(vector<int> &arr, int n, int i) {
 void heapSort(vector<int> &arr, int n) {
 
     int size = n;
-    while (size > 0) {
-        swap(arr[0], arr[size]);
-        cout<<"after swapping: ";
-        for (int i=0; i<arr.size(); i++) {
-            cout<<arr[i]<<" ";
-        } cout<<endl;
+    while(size>0){
+        swap(arr[size], arr[0]);
         size--;
         heapify(arr, size, 0);
-        cout<<"after heapify: ";
-        for (int i=0; i<arr.size(); i++) {
-            cout<<arr[i]<<" ";
-        } cout<<endl<<endl;
     }
 
 }
 
 int main() {
 
-    vector<int> arr = {5, 2, 3, 1};
+    vector<int> arr = {5, 2, 3, 1, 6, 4};
     int n = arr.size();
 
     cout<<" array: ";
@@ -61,16 +53,11 @@ int main() {
     } cout<<endl<<endl;
 
     for (int i=n/2-1; i>=0; i--) {
-        // heapify 'i'th element
         heapify(arr, n, i);
     }
 
-    cout<<"heapify array: ";
-    for (int i=0; i<arr.size(); i++) {
-        cout<<arr[i]<<" ";
-    } cout<<endl<<endl;
-
     heapSort(arr, n-1);
+
     cout<<"sorted array: ";
     for (int i=0; i<arr.size(); i++) {
         cout<<arr[i]<<" ";

@@ -10,13 +10,15 @@ using namespace std;
 
 vector<int> insertionSort(vector<int>& arr, int n) {
     for (int i=1; i<n; i++) {
-        for (int j=i; j>0; j--) {
-            if (arr[j]<arr[j-1]) {
-                swap(arr[j], arr[j-1]);
+        int temp = arr[i], j;
+        for (j=i-1; j>=0; j--) {
+            if (arr[j] > temp) {
+                arr[j+1] = arr[j];
             } else {
                 break;
             }
         }
+        arr[j+1] = temp;
     }
     return arr;
 }

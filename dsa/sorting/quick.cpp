@@ -9,29 +9,32 @@
 using namespace std;
 
 int partition(vector<int>& arr, int lo, int hi) {
+    
     int pivotIndex = lo;
     for (int i=lo; i<=hi; i++) {
-        if (arr[i]<arr[lo]) {
+        if (arr[i] < arr[lo]) {
             pivotIndex++;
         }
     }
     swap(arr[lo], arr[pivotIndex]);
+
     int i = lo, j = hi;
-    while (i<pivotIndex and j>pivotIndex) {
-        if ((arr[i] >= arr[pivotIndex]) and (arr[j] < arr[pivotIndex])) {
+    while (i < pivotIndex and j > pivotIndex) {
+        if (arr[i] >= arr[pivotIndex] and arr[j] < arr[pivotIndex]) {
             swap(arr[i], arr[j]);
             i++;
-            j++;
+            j--;
         }
-        if (arr[i] < arr[pivotIndex]) {
+        else if (arr[i] < arr[pivotIndex]) {
             i++;
         }
-        if (arr[j] >= arr[pivotIndex]) {
+        else if (arr[j] >= arr[pivotIndex]) {
             j--;
         }
     }
 
     return pivotIndex;
+
 }
 
 void quickSort(vector<int>& arr, int lo, int hi) {
