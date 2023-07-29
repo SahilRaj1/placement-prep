@@ -36,9 +36,9 @@ public:
     }
 
     int lengthOfLIS(vector<int>& nums) {
-        int n = nums.size();
-        vector<vector<int>> dp(n+1, vector<int>(n+2, -1));
-        return solve(nums, 0, -1, dp);
+            int n = nums.size();
+            vector<vector<int>> dp(n+1, vector<int>(n+2, -1));
+            return solve(nums, 0, -1, dp);
     }
 };
 
