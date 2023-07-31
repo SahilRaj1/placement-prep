@@ -11,10 +11,12 @@
 using namespace std;
 
 void merge(vector<int>& arr, int s, int e) {
+
     int mid = (s+e)/2;
     int len1 = mid - s + 1;
     int len2 = e - mid;
     vector<int> leftArray(len1), rightArray(len2);
+
     for (int i=0; i<len1; i++) {
         leftArray[i] = arr[s+i];
     }
@@ -33,6 +35,7 @@ void merge(vector<int>& arr, int s, int e) {
         }
         k++;
     }
+
     while (i<len1) {
         arr[k] = leftArray[i];
         i++;
@@ -43,6 +46,7 @@ void merge(vector<int>& arr, int s, int e) {
         j++;
         k++;
     }
+    
 }
 
 void mergeSort(vector<int>& arr, int s, int e) {

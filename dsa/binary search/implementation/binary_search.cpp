@@ -22,11 +22,13 @@ void binarySearch(vector<int>& arr, int target) {
             return;
         }
     }
+    
     if (arr[hi]==target or arr[lo]==target) {
         cout<<"found"<<endl;
     } else {
         cout<<"not found"<<endl;
     }
+
     return;
 }
 

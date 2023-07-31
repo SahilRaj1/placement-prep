@@ -5,28 +5,44 @@ using namespace std;
 
 class Solution {
 public:
-    int peakIndexInMountainArray(vector<int>& arr) {
-
-        int n = arr.size();
+    vector<int> searchRange(vector<int>& nums, int target) {
+        int n=nums.size();
         int lo=0, hi=n-1, mid;
 
-        while (hi-lo>1) {
+        vector<int> ans = {-1, -1};
+
+        if (n==1 and nums[0]==target) {
+            ans[0]=0;
+            ans[1]=0;
+            return ans;
+        }    
+
+        while(hi-lo>=0) {
             mid = lo+(hi-lo)/2;
-            if (arr[mid]>arr[mid+1] and arr[mid]<arr[mid-1]) {
-                hi = mid;
-            } else if (arr[mid]<arr[mid+1] and arr[mid]>arr[mid-1]) {
-                lo = mid;
+            if (nums[mid]==target) {
+                ans[0] = mid;
+                hi=mid-1;
+            } else if (nums[mid]>target) {
+                hi=mid-1;
             } else {
-                return mid;
+                lo=mid+1;
             }
         }
 
-        if (arr[hi]>arr[lo]) {
-            return hi;
-        } else {
-            return lo;
+        lo=0, hi=n-1;
+        while(hi-lo>=0) {
+            mid = lo+(hi-lo)/2;
+            if (nums[mid]==target) {
+                ans[1] = mid;
+                lo=mid+1;
+            } else if (nums[mid]>target) {
+                hi=mid-1;
+            } else {
+                lo=mid+1;
+            }
         }
-
+        
+        return ans;
     }
 };
 
