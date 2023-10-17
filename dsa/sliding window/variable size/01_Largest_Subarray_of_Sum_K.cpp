@@ -23,7 +23,7 @@ public:
 
             // checking condition and calculating window size
             if (sum == k) {
-                ans++;
+                ans = max(ans, j-i+1);
             }
 
             // remove proccessing of ith element
@@ -31,7 +31,7 @@ public:
                 sum -= arr[i];
                 i++;
                 if (sum == k) {
-                    ans++;
+                    ans = max(ans, j-i+1);
                 }
             }
 

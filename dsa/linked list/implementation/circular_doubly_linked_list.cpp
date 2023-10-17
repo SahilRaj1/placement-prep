@@ -1,4 +1,4 @@
-/* TOPIC:  */
+/* TOPIC: Circular Doubly Linked List */
 
 // REFERENCE: https://youtu.be/q8gdBn9RPeI
 

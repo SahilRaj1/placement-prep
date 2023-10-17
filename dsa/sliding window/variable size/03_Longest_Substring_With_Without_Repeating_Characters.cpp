@@ -1,4 +1,4 @@
-/* TOPIC: Longest Substring With Without Repeating Characters */
+/* TOPIC: Longest Substring Without Repeating Characters */
 
 // REFERENCE: https://youtu.be/L6cffskouPQ
 // QUESTION: https://leetcode.com/problems/longest-substring-without-repeating-characters/
@@ -22,7 +22,7 @@ public:
             }
 
             if (ct == j-i+1) {
-                ans = max(ans, ct);
+                ans = max(ans, j - i + 1);
             }
 
             while (ct < j-i+1) {
