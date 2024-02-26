@@ -8,7 +8,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> insertionSort(vector<int>& arr, int n) {
+void insertionSort(vector<int>& arr, int n) {
     for (int i=1; i<n; i++) {
         int temp = arr[i], j;
         for (j=i-1; j>=0; j--) {
@@ -20,7 +20,6 @@ vector<int> insertionSort(vector<int>& arr, int n) {
         }
         arr[j+1] = temp;
     }
-    return arr;
 }
 
 int main() {
@@ -32,7 +31,7 @@ int main() {
         cin>>arr[i];
     }
 
-    vector<int> sortedArr = insertionSort(arr, n);
+    insertionSort(arr, n);
     for (int &it: arr) {
         cout<<it<<" ";
     } cout<<endl;

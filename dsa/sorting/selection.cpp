@@ -8,7 +8,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> selectionSort(vector<int>& arr, int n) {
+void selectionSort(vector<int>& arr, int n) {
     for (int i=0; i<n; i++) {
         int minIndex = i;
         for (int j=i+1; j<n; j++) {
@@ -18,7 +18,6 @@ vector<int> selectionSort(vector<int>& arr, int n) {
         }
         swap(arr[i], arr[minIndex]);
     }
-    return arr;
 }
 
 int main() {
@@ -30,7 +29,7 @@ int main() {
         cin>>arr[i];
     }
 
-    vector<int> sortedArr = selectionSort(arr, n);
+    selectionSort(arr, n);
     for (int &it: arr) {
         cout<<it<<" ";
     } cout<<endl;

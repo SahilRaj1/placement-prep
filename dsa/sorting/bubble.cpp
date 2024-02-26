@@ -8,7 +8,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> bubbleSort(vector<int>& arr, int n) {
+void bubbleSort(vector<int>& arr, int n) {
     for (int i=1; i<n; i++) {
         for (int j=0; j<n-i; j++) {
             if (arr[j]>arr[j+1]) {
@@ -16,7 +16,6 @@ vector<int> bubbleSort(vector<int>& arr, int n) {
             }
         }
     }
-    return arr;
 }
 
 int main() {
@@ -28,7 +27,7 @@ int main() {
         cin>>arr[i];
     }
 
-    vector<int> sortedArr = bubbleSort(arr, n);
+    bubbleSort(arr, n);
     for (int &it: arr) {
         cout<<it<<" ";
     } cout<<endl;
